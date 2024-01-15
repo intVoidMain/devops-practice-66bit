@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  cosmoport_1:
+    extends:
+      file: docker-compose-common.yml
+      service: cosmoport
+    container_name: cosmoport_1
+    environment:
+      - ASP_INSTANCE_NAME=${INSTANCE_NAME_1}
+
+  cosmoport_2:
+    extends:
+      file: docker-compose-common.yml
+      service: cosmoport
+    container_name: cosmoport_2
+    environment:
+      - ASP_INSTANCE_NAME=${INSTANCE_NAME_2}
+    
+  cosmoport_3:
+    extends:
+      file: docker-compose-common.yml
+      service: cosmoport
+    container_name: cosmoport_3
+    environment:
+      - ASP_INSTANCE_NAME=${INSTANCE_NAME_3}
+
+  cosmoport_4:
+    extends:
+      file: docker-compose-common.yml
+      service: cosmoport
+    container_name: cosmoport_4
+    environment:
+      - ASP_INSTANCE_NAME=${INSTANCE_NAME_4}
+
+networks:
+  cosmoport_network:
+    driver: bridge

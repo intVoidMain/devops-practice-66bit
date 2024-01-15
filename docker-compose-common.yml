@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  cosmoport:
+    image: hub.66bit.ru/shared/images/devops-practice:latest
+    networks:
+      - cosmoport_network
