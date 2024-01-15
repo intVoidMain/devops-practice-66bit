@@ -10,6 +10,11 @@ services:
       - 8080:80 
     networks:
       - cosmoport_network
+    depends_on:
+      - cosmoport_1
+      - cosmoport_2
+      - cosmoport_3
+      - cosmoport_4
 
   cosmoport_1:
     extends:
