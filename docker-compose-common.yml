@@ -5,3 +5,4 @@ services:
     image: hub.66bit.ru/shared/images/devops-practice:latest
     networks:
       - cosmoport_network
+

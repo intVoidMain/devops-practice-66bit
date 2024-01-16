@@ -1,13 +1,13 @@
 version: "3"
 
 services:
-  nginx-lb:
+  dispatching_service:
     image: nginx:latest
     container_name: nginx-lb
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
-      - 8080:80 
+      - "8080:80"
     networks:
       - cosmoport_network
     depends_on:
@@ -51,3 +51,4 @@ services:
 networks:
   cosmoport_network:
     driver: bridge
+
